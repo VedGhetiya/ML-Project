@@ -82,6 +82,14 @@ def get_bmi_category(bmi: float) -> str:
     else:
         return "Obese"
 
+@app.get("/")
+def root():
+    return {
+        "message": "CardioVision AI Backend API is running",
+        "docs": "/docs",
+        "health": "/api/health"
+    }
+
 @app.get("/api/health")
 def health_check():
     return {
