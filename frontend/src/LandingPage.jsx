@@ -147,9 +147,10 @@ export default function LandingPage() {
 
   // Check health check endpoints
   useEffect(() => {
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://ml-project-n1cp.onrender.com';
     const urls = [
+      `${apiUrl.replace(/\/+$/, '')}/api/health`,
       'http://127.0.0.1:8000/api/health',
-      'https://cardio-vascular-backend.onrender.com/api/health',
     ];
 
     let checkIndex = 0;
@@ -184,9 +185,10 @@ export default function LandingPage() {
     if (e && e.preventDefault) e.preventDefault();
     setLoading(true);
 
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://ml-project-n1cp.onrender.com';
     const endpoints = [
+      `${apiUrl.replace(/\/+$/, '')}/api/predict`,
       'http://127.0.0.1:8000/api/predict',
-      'https://cardio-vascular-backend.onrender.com/api/predict',
     ];
 
     let succeeded = false;
