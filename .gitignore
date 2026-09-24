@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+
+# Node / Frontend
+node_modules/
+dist/
+.vite/
+.oxlintrc.json
+
+# Large files & redundant archives/directories
+/cardio_model.pkl
+/cardio_model.joblib
+!backend/cardio_model.joblib
+Cardio_Vascular_Predictor_Project.zip
+Cardio_Vascular_Predictor_Project/
+
+# IDE & System files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local Environment variables
+.env
+.env.local
